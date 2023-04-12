@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     // armas
     public bool conArma;
 
+   
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -191,4 +193,6 @@ public class PlayerController : MonoBehaviour
     {
         avanzoSolo= false;
     }
+
+  
 }

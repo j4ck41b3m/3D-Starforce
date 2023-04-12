@@ -1,0 +1,11 @@
+Model Information:
+* title:	Megaman Virus - Mettaur
+* source:	https://sketchfab.com/3d-models/megaman-virus-mettaur-7524f7243b5643f492921d14ca2a5f29
+* author:	XtremeZero (https://sketchfab.com/mohammedzero43)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Megaman Virus - Mettaur" (https://sketchfab.com/3d-models/megaman-virus-mettaur-7524f7243b5643f492921d14ca2a5f29) by XtremeZero (https://sketchfab.com/mohammedzero43) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
