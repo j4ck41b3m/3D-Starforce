@@ -7,11 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Geo
+  m_Name: Naranja
   m_Shader: {fileID: 4800000, guid: 128c5f1edaefa4c4fb3f9f7a4615edb2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _CLIPPED_ON
   - _SEGMENTED_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -43,7 +42,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 42b034cd96be9844eb776c0858086be4, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -62,7 +61,7 @@ Material:
     m_Floats:
     - _AmbientCol: 0
     - _BumpScale: 1
-    - _Clipped: 1
+    - _Clipped: 0
     - _ColBright: 0
     - _ColIntense: 1
     - _Cutoff: 0.5
@@ -71,30 +70,30 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Lumin: 1.02
+    - _Lumin: 0
     - _MaxLight: 1
     - _Metallic: 0
-    - _MinLight: 0.646
+    - _MinLight: 0.76
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0
-    - _OtlWidth: 0.99
+    - _OtlWidth: 5
     - _Parallax: 0.02
     - _Segmented: 1
-    - _ShnIntense: 0.063
+    - _ShnIntense: 0
     - _ShnOverlap: 0
-    - _ShnRange: 0.215
-    - _ShnSmooth: 0.085
+    - _ShnRange: 0.15
+    - _ShnSmooth: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 5.8
-    - _StpSmooth: 0.169
+    - _Steps: 3.7
+    - _StpSmooth: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.11372549, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OtlColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShnColor: {r: 0.23988585, g: 0.12549017, b: 1.4980392, a: 1}
+    - _ShnColor: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
