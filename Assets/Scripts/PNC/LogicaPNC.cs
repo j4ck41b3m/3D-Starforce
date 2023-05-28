@@ -12,13 +12,15 @@ public class LogicaPNC : MonoBehaviour
     public GameObject panel1;
     public GameObject panel2;
     public GameObject panel3;
+    public GameObject panelNext;
     public TextMeshProUGUI textoMision;
     public bool jugadorCerca;
-    public bool aceptarMision;
+    public bool aceptarMision, completed;
     //public GameObject[] objetivos;
     public int numeroObjetivos;
     public GameObject botonDeMision;
     public GameObject[] enemies;
+    public Transform tp;
 
 
 
@@ -40,6 +42,13 @@ public class LogicaPNC : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("ToKill");
         numeroObjetivos = enemies.Length;
         textoMision.text = "Número de virus restantes: " + numeroObjetivos;
+        if (numeroObjetivos <=0 && !completed)
+        {
+            panelNext.SetActive(true);
+            playerController.transform.position = tp.position;
+            completed = true;
+
+        }
 
         if (Input.GetKeyDown(KeyCode.X) && !aceptarMision 
             && playerController.puedoSaltar && jugadorCerca)
