@@ -73560,7 +73560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -44.625305, y: -364.55704}
+  m_AnchoredPosition: {x: -44.625244, y: -364.557}
   m_SizeDelta: {x: -1580.9755, y: -976.7036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541998442
@@ -100506,7 +100506,6 @@ GameObject:
   - component: {fileID: 6798155045126448816}
   - component: {fileID: 6798155045126448818}
   - component: {fileID: 6798155045126448820}
-  - component: {fileID: 6798155045126448819}
   - component: {fileID: 6798155045126448821}
   m_Layer: 0
   m_Name: Geo2
@@ -102037,18 +102036,6 @@ MonoBehaviour:
   audi: {fileID: 0}
   pew: {fileID: 8300000, guid: c3768121ee3cdef4b8b0a528a8a366fd, type: 3}
   reds: []
---- !u!114 &6798155045126448819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287132543034533487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a61008339f9ad44ca7765a0b0e3ee6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6798155045126448820
 MonoBehaviour:
   m_ObjectHideFlags: 0

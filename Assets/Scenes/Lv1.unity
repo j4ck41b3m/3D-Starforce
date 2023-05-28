@@ -28703,6 +28703,7 @@ MonoBehaviour:
   textoMision: {fileID: 145607177}
   jugadorCerca: 0
   aceptarMision: 0
+  completed: 0
   numeroObjetivos: 0
   botonDeMision: {fileID: 714592952}
   enemies: []
@@ -101359,7 +101360,6 @@ GameObject:
   - component: {fileID: 6798155045126448816}
   - component: {fileID: 6798155045126448818}
   - component: {fileID: 6798155045126448820}
-  - component: {fileID: 6798155045126448819}
   - component: {fileID: 6798155045126448821}
   m_Layer: 0
   m_Name: Geo2
@@ -102655,6 +102655,7 @@ MonoBehaviour:
   textoMision: {fileID: 145607177}
   jugadorCerca: 0
   aceptarMision: 0
+  completed: 0
   numeroObjetivos: 0
   botonDeMision: {fileID: 714592952}
   enemies: []
@@ -102950,18 +102951,6 @@ MonoBehaviour:
   audi: {fileID: 0}
   pew: {fileID: 8300000, guid: c3768121ee3cdef4b8b0a528a8a366fd, type: 3}
   reds: []
---- !u!114 &6798155045126448819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287132543034533487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a61008339f9ad44ca7765a0b0e3ee6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6798155045126448820
 MonoBehaviour:
   m_ObjectHideFlags: 0
