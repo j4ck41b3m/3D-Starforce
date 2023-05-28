@@ -13,7 +13,6 @@ Material:
   m_InvalidKeywords:
   - _CLIPPED_ON
   - _SEGMENTED_ON
-  - _SHNOVERLAP_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -72,30 +71,30 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Lumin: 0.37
+    - _Lumin: 1.4
     - _MaxLight: 1
     - _Metallic: 0
-    - _MinLight: 0.03
+    - _MinLight: 0.646
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0
-    - _OtlWidth: 1.21
+    - _OtlWidth: 5
     - _Parallax: 0.02
     - _Segmented: 1
-    - _ShnIntense: 0.305
-    - _ShnOverlap: 1
-    - _ShnRange: 0.123
-    - _ShnSmooth: 0
+    - _ShnIntense: 0.109
+    - _ShnOverlap: 0
+    - _ShnRange: 0.215
+    - _ShnSmooth: 0.107
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 4.3
-    - _StpSmooth: 0
+    - _Steps: 7
+    - _StpSmooth: 0.169
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.7221481, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.72156864, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OtlColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShnColor: {r: 0.15881987, g: 0.7830189, b: 0.7709183, a: 1}
+    - _ShnColor: {r: 0.23988585, g: 0.12549017, b: 1.4980392, a: 1}
   m_BuildTextureStacks: []

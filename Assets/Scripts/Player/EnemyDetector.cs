@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class EnemyDetector : MonoBehaviour
 {
+    public Transform[] Targeto;
+    public GameObject[] reds;
+    public AudioClip found;
+    public AudioSource audi;
+    public GameObject Diana;
     public int enemies;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audi = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,17 +24,28 @@ public class EnemyDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Enemigo"))
         {
-           // enemies++;
+           GameObject red = Instantiate(Diana, other.transform.position, other.transform.rotation);
+            GameObject enemy = other.gameObject;
+            enemy.GetComponent<LogicaEnemigo2>().dia = red;
+            other.tag = "LockedOn";
+            audi.PlayOneShot(found);
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Enemigo"))
+        if (other.CompareTag("Target"))
         {
-            enemies--;
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("LockedOn"))
+        {
+            other.tag = "Enemigo";
+            Destroy(other.GetComponent<LogicaEnemigo2>().dia);
         }
     }
     private void OnTriggerStay(Collider other)

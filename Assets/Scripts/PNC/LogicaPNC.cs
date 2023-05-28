@@ -15,9 +15,10 @@ public class LogicaPNC : MonoBehaviour
     public TextMeshProUGUI textoMision;
     public bool jugadorCerca;
     public bool aceptarMision;
-    public GameObject[] objetivos;
+    //public GameObject[] objetivos;
     public int numeroObjetivos;
     public GameObject botonDeMision;
+    public GameObject[] enemies;
 
 
 
@@ -25,8 +26,8 @@ public class LogicaPNC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        numeroObjetivos = objetivos.Length;
-        textoMision.text = "Número de cubos restantes " + numeroObjetivos;
+
+        //numeroObjetivos = objetivos.Length;
         playerController = GameObject.FindGameObjectWithTag("Player").
             GetComponent<PlayerController>();
         simboloMision.SetActive(true);
@@ -36,8 +37,12 @@ public class LogicaPNC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        enemies = GameObject.FindGameObjectsWithTag("ToKill");
+        numeroObjetivos = enemies.Length;
+        textoMision.text = "Número de virus restantes: " + numeroObjetivos;
+
         if (Input.GetKeyDown(KeyCode.X) && !aceptarMision 
-            && playerController.puedoSaltar)
+            && playerController.puedoSaltar && jugadorCerca)
         {
             Vector3 posicionPlayer = new Vector3(transform.position.x,
                 playerController.gameObject.transform.position.y,
@@ -93,10 +98,10 @@ public class LogicaPNC : MonoBehaviour
     {
         playerController.enabled=true;
         aceptarMision = true;
-        for (int i = 0; i < objetivos.Length; i++)
+        /*for (int i = 0; i < enemies.Length; i++)
         {
-            objetivos[i].SetActive(true);
-        }
+            enemies[i].SetActive(true);
+        }*/
         jugadorCerca = false;
         simboloMision.SetActive(false);
         panel1.SetActive(true);
@@ -104,9 +109,9 @@ public class LogicaPNC : MonoBehaviour
         panel3.SetActive(false);
     }
 
-    public void BotonOK()
+    public void BotonOK(int level)
     {
-        SceneManager.LoadScene("fprigid");
+        SceneManager.LoadScene(level);
     }
 
 

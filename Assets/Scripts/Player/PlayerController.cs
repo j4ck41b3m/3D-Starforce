@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +7,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Movimientos basicos
-    public float velocidadMovimiento = 5f;
+    public float velocidadMovimiento;
     public float velocidadRotacion = 100f;
     public float x, y;
 
@@ -33,16 +32,21 @@ public class PlayerController : MonoBehaviour
     public float impulsoGolpe = 10f;
 
     // Correr
-    public float velCorrer = 10f;
-
+    public float velCorrer;
+    
 
     // armas
     public bool conArma;
-
-   
+    public Transform muzzle;
+    public GameObject Ball, curva;
+    public int side;
+    public AudioSource audi;
+    public AudioClip pew;
+    public GameObject[] reds;
 
     void Start()
     {
+        audi = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
 
         // Salto
@@ -64,6 +68,7 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
             transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);
         }
+        
 
         if (avanzoSolo)
         {
@@ -74,6 +79,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        reds = GameObject.FindGameObjectsWithTag("Target");
         //Correr
         Correr();
 
@@ -84,20 +90,27 @@ public class PlayerController : MonoBehaviour
         y = Input.GetAxis("Vertical");
 
         // Golpeo
-        if (Input.GetKeyDown(KeyCode.Return) && puedoSaltar && !estoyAtacando)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && puedoSaltar && !estoyAtacando && reds.Length > 0)
         {
-            if (conArma)
-            {
+            
+            audi.PlayOneShot(pew);
+            side = Random.Range(0, 4);
+            print(side);
+            Instantiate(curva, transform.position, transform.rotation);
+            estoyAtacando = true;
 
+            if (x == 0 && y== 0)
+            {
+                //anim.SetTrigger("Golpeoo");
                 anim.SetTrigger("Golpeo2");
-                estoyAtacando = true;
             }
-            else
-            {
+            
 
-                anim.SetTrigger("Golpeoo");
-                estoyAtacando = true;
-            }
+            
+        }
+        else
+        {
+            estoyAtacando = false;
         }
         //
 
@@ -148,14 +161,14 @@ public class PlayerController : MonoBehaviour
             velocidadMovimiento = velocidadAgachado;
             ///
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             anim.SetBool("Agachado", false);
             ///////////////////todo
             velocidadMovimiento = velocidaInicial;
             ///
-
         }
+        
     }
 
     private void Saltar()
